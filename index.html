@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Criativo</title>
+  <!-- Ícones do FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Folha de Estilos Externos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="instagram-card">
+    
+    <!-- Cabeçalho do Perfil -->
+    <header class="profile-header">
+      <div class="avatar-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwJEG_qWgxtWbPKzF5IAN5g3NZCqrcMu7txP-55h8KQw&s=10" alt="Foto de Perfil" class="profile-avatar">
+      </div>
+      
+      <div class="profile-info">
+        <h1 class="profile-name">Perfil Criativo</h1>
+        <p class="profile-handle">Kauanny</p>
+        <p class="profile-bio">
+          ✨ Explorando novas ideias & experiências virtuais.<br>
+          🎨 Designer por paixão | Amante de arte visual.<br>
+          📍 São Paulo, Brasil
+        </p>
+      </div>
+    </header>
+
+    <!-- Destaques (Highlights) -->
+    <section class="highlights-section">
+      <div class="highlight-item">
+        <div class="highlight-circle">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <span class="highlight-label">Sobre</span>
+      </div>
+
+      <div class="highlight-item">
+        <div class="highlight-circle">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <span class="highlight-label">Ideias</span>
+      </div>
+
+      <div class="highlight-item">
+        <div class="highlight-circle">
+          <i class="fa-solid fa-folder-open"></i>
+        </div>
+        <span class="highlight-label">Projetos</span>
+      </div>
+
+      <div class="highlight-item">
+        <div class="highlight-circle">
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <span class="highlight-label">Contato</span>
+      </div>
+    </section>
+
+    <!-- Painel Interativo de Ações (3 Pilares do DOM) -->
+    <section class="actions-section">
+      <!-- 01. Dark Mode -->
+      <button id="themeToggleBtn" class="action-btn">
+        <i class="fa-solid fa-moon"></i>
+        <span>Modo Escuro</span>
+      </button>
+
+      <!-- 02. Curiosidade Oculta -->
+      <button id="secretToggleBtn" class="action-btn">
+        <i class="fa-solid fa-eye"></i>
+        <span id="secretBtnText">Revelar Curiosidade</span>
+      </button>
+
+      <!-- 03. Contador de Curtidas -->
+      <button id="likeBtn" class="action-btn like-btn">
+        <i class="fa-solid fa-heart"></i>
+        <span>Curtir</span>
+        <span id="likeCount" class="badge">0</span>
+      </button>
+    </section>
+
+    <!-- Área da Curiosidade Revelável -->
+    <section id="secretBox" class="secret-card hidden">
+      <div class="secret-content">
+        <i class="fa-solid fa-sparkles secret-icon"></i>
+        <div>
+          <h3>Curiosidade Oculta!</h3>
+          <p>Eu costumo encontrar minhas melhores ideias criativas enquanto ouço música instrumental no meio da noite! 🎧✨</p>
+        </div>
+      </div>
+    </section>
+
+    
+
+  </main>
+
+  <!-- Script JavaScript Externo -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+/* Variváveis de Cores em Paleta Pastel */
+:root {
+  --bg-pattern-dot: #e1d8ee;
+  --bg-body: #f8f6fc;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --text-primary: #4a4062;
+  --text-secondary: #7e7393;
+  --accent-pastel: #ffd1dc;
+  --accent-hover: #f3b0c3;
+  --btn-bg: #f0ebf7;
+  --btn-text: #5a4b73;
+  --card-border: rgba(255, 255, 255, 0.6);
+  --shadow-color: rgba(140, 120, 170, 0.12);
+  --story-ring-1: #ffb7b2;
+  --story-ring-2: #ffd1dc;
+  --story-ring-3: #e2f0cb;
+}
+
+/* Tema Escuro (Pastel Dark) */
+body.dark-mode {
+  --bg-pattern-dot: #2d2638;
+  --bg-body: #1c1825;
+  --card-bg: rgba(35, 30, 48, 0.88);
+  --text-primary: #ebdffb;
+  --text-secondary: #bba8d8;
+  --accent-pastel: #8d6b9d;
+  --accent-hover: #a37cb4;
+  --btn-bg: #2d273e;
+  --btn-text: #dfd3f3;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.35);
+  --story-ring-1: #b5ead7;
+  --story-ring-2: #c7ceea;
+  --story-ring-3: #e2f0cb;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Fundo com Bolinhas Coloridas (Polka Dots) */
+body {
+  background-color: var(--bg-body);
+  background-image: 
+    radial-gradient(#ffb7b2 15%, transparent 16%),
+    radial-gradient(#b5ead7 15%, transparent 16%),
+    radial-gradient(#c7ceea 15%, transparent 16%),
+    radial-gradient(#e2f0cb 15%, transparent 16%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px, 30px 0, 0 30px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card Estilo Instagram com Glassmorphism */
+.instagram-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 28px;
+  width: 100%;
+  max-width: 480px;
+  padding: 32px 28px;
+  box-shadow: 0 16px 40px var(--shadow-color);
+}
+
+/* Cabeçalho do Perfil */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+/* Borda da foto estilo Instagram (Story Ring) */
+.avatar-container {
+  padding: 4px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--story-ring-1), var(--story-ring-2), var(--story-ring-3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-avatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--card-bg);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.profile-handle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.profile-bio {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+/* Destaques (Highlights) */
+.highlights-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding: 0 4px;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.highlight-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--btn-bg);
+  border: 2px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.highlight-item:hover .highlight-circle {
+  transform: translateY(-3px);
+  background: var(--accent-pastel);
+}
+
+.highlight-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Botões de Ação */
+.actions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 14px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.action-btn:hover {
+  background-color: var(--accent-pastel);
+  transform: translateY(-2px);
+}
+
+.like-btn i {
+  color: #ff6b81;
+}
+
+.badge {
+  background-color: #ff6b81;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Animação de Pulso nas Curtidas */
+.pulse {
+  animation: pulseAnim 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes pulseAnim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Caixa da Curiosidade Oculta */
+.secret-card {
+  background: var(--btn-bg);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--accent-hover);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.secret-card.hidden {
+  display: none;
+}
+
+.secret-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.secret-icon {
+  font-size: 1.2rem;
+  color: #ffb7b2;
+  margin-top: 2px;
+}
+
+.secret-content h3 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.secret-content p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Rodapé */
+.card-footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
